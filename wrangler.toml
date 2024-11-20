@@ -2,6 +2,7 @@ name = "bot"
 type = "javascript"
 account_id = "ccba895367a75a4a22de25acf478c910"
 workers_dev = true
+main = "_worker.js"
 
 [build]
 command = "npm run build"
