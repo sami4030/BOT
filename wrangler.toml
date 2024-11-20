@@ -3,6 +3,16 @@ type = "javascript"
 account_id = "ccba895367a75a4a22de25acf478c910"
 workers_dev = true
 main = "_worker.js"
+  "scripts": {
+    "build": "wrangler build",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "wrangler": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC"
 
 [build]
 command = "npm run build"
