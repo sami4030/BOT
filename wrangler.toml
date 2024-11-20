@@ -12,7 +12,7 @@ main = "_worker.js"
     "wrangler": "^2.0.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
 
 [build]
 command = "npm run build"
