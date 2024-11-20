@@ -7,9 +7,6 @@ main = "_worker.js"
     "build": "wrangler build",
     "deploy": "wrangler publish"
   }
-  "devDependencies": {
-    "wrangler": "^2.0.0"
-  }
 
 [build]
 command = "npm run build"
