@@ -1,16 +1,10 @@
-{
-  "name": "bot",
-  "version": "1.0.0",
-  "description": "A Cloudflare Worker project",
-  "main": "_worker.js",
-  "scripts": {
-    "build": "echo 'Building the project...' && mkdir -p dist && cp _worker.js dist/_worker.js",
-    "deploy": "wrangler publish"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "wrangler": "^2.0.0"
-  },
-  "author": "",
-  "license": "ISC"
-}
+name = "bot"
+type = "javascript"
+account_id = "ccba895367a75a4a22de25acf478c910"
+workers_dev = true
+main = "_worker.js"
+
+[build]
+command = "npm run build"
+upload = { format = "modules", dir = "dist" }
+pages_build_output_dir = "dist"
