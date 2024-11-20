@@ -1,5 +1,5 @@
 {
-  "name": "BOT",
+  "name": "cloudflare-worker-project",
   "version": "1.0.0",
   "description": "A Cloudflare Worker project",
   "main": "index.js",
