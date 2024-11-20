@@ -6,13 +6,11 @@ main = "_worker.js"
   "scripts": {
     "build": "wrangler build",
     "deploy": "wrangler publish"
-  },
-  "dependencies": {},
+  }
   "devDependencies": {
     "wrangler": "^2.0.0"
-  },
-  "author": "",
-  "license": "ISC",
+  }
+  "license": "ISC"
 
 [build]
 command = "npm run build"
