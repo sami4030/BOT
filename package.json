@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "wrangler build",
-    "deploy": "wrangler publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "wrangler publish"
   },
   "dependencies": {},
   "devDependencies": {
