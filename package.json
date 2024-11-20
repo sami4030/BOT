@@ -2,9 +2,9 @@
   "name": "cloudflare-worker-project",
   "version": "1.0.0",
   "description": "A Cloudflare Worker project",
-  "main": "index.js",
+  "main": "_worker.js",
   "scripts": {
-    "build": "wrangler build",
+    "build": "echo 'Building the project...' && mkdir -p dist && cp _worker.js dist/_worker.js",
     "deploy": "wrangler publish"
   },
   "dependencies": {},
