@@ -2,7 +2,7 @@
   "name": "bot",
   "version": "1.0.0",
   "description": "A Cloudflare Worker project",
-  "main": "_worker.js",
+  "main": "dist/_worker.js",
   "scripts": {
     "build": "echo 'Building the project...' && mkdir -p dist && cp _worker.js dist/_worker.js",
     "deploy": "wrangler publish"
