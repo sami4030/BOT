@@ -2,7 +2,12 @@ name = "cloudflare-worker-project"
 type = "javascript"
 account_id = "ccba895367a75a4a22de25acf478c910"
 workers_dev = true
-main="_worker.js"
+main = "_worker.js"
 
 [build]
 command = "npm run build"
+upload = {
+  format = "modules",
+  dir = "dist"
+}
+pages_build_output_dir = "dist"
