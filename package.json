@@ -1,0 +1,17 @@
+{
+  "name": "BOT",
+  "version": "1.0.0",
+  "description": "A Cloudflare Worker project",
+  "main": "index.js",
+  "scripts": {
+    "build": "wrangler build",
+    "deploy": "wrangler publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "wrangler": "^2.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
