@@ -1,0 +1,14 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # هر 5 دقیقه یکبار اجرا می‌شود
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Keep-Alive Request
+        run: curl -X GET "https://sami4030.pythonanywhere.com"  # آدرس برنامه Flask خود را وارد کنید
