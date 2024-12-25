@@ -1,0 +1,23 @@
+name: Restart Service
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # این زمان‌بندی را می‌توانید تغییر دهید
+  workflow_dispatch:
+
+jobs:
+  restart:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Run restart script
+      run: |
+        ssh sami303@ssh.pythonanywhere.com 'bash -s' < ./restart_service.sh
