@@ -1,0 +1,18 @@
+name: Restart_Bot_303
+
+on:
+  schedule:
+    - cron: '30 23,11 * * *' # اجرای کرون جاب در ساعت ۱۱:۳۰ شب (۳ صبح تهران) و ۱۱:۳۰ صبح (۳ عصر تهران) به وقت UTC
+  workflow_dispatch:
+
+jobs:
+  restart:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Restart bot using API
+      run: |
+        curl -X POST https://www.pythonanywhere.com/api/v0/user/sami303/files/path/home/sami303/run_restart_script.py --header "Authorization: Token ${{ secrets.API_TOKEN_303 }}"
