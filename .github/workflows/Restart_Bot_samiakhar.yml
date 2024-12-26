@@ -15,4 +15,4 @@ jobs:
 
     - name: Restart bot using API
       run: |
-        curl -X POST https://www.pythonanywhere.com/api/v0/user/samiakhar/files/path/home/samiakhar/manage_console.py --header "Authorization: Token ${{ secrets.API_TOKEN_samiakhar }}"
+        curl -X POST https://www.pythonanywhere.com/api/v0/user/samiakhar/files/path/home/samiakhar/manage_console.py --header "Authorization: Token ${{ secrets.API_TOKEN_SAMIAKHAR }}"
