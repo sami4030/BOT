@@ -1,4 +1,4 @@
-name: Restart Service
+name: Restart Telegram Bot
 
 on:
   schedule:
@@ -13,11 +13,6 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-    - name: Run restart script
+    - name: Restart bot using API
       run: |
-        ssh sami303@ssh.pythonanywhere.com 'bash -s' < ./restart_service.sh
+        curl -X POST https://www.pythonanywhere.com/api/v0/user/sami303/files/path/home/sami303/run_restart_script.py --header 'Authorization: Token e23969fcd387b50fdc432580c028845e2249d0b8'
